@@ -1,0 +1,7 @@
+src.pem
+.env
+src.crx
+release.zip
+node_modules
+dist
+.DS_Store

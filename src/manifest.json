@@ -1,0 +1,34 @@
+{
+    "name": "DevTo Comment Quality Analyzer",
+    "short_name": "DevTo Comment Quality Analyzer",
+    "description": "Analyzes blog comments on DevTo blog posts for quality content determined by a similarity scoring on semantic and syntactic features. The higher the score, the more likely the comments on the blog post are on topic and not spam.",
+    "homepage_url": "http://chrome.google.com/webstore",
+    "version": "0.0.1",
+    "version_name": "0.0.1",
+    "manifest_version": 3,
+    "permissions": ["activeTab", "storage", "scripting"],
+    "minimum_chrome_version": "88",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "assets/img/icon16.png",
+      "32": "assets/img/icon32.png",
+      "48": "assets/img/icon48.png",
+      "128": "assets/img/icon128.png"
+    },
+    "action": {
+      "default_title": "DevTo Comment Quality Analyzer",
+      "default_popup": "popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.dev.to/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  

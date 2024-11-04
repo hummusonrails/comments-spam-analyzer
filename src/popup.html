@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev.to Comment Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1 class="card-title">Dev.to Comment Analyzer</h1>
+      <p class="card-description">Analyze blog post comments for overall quality, with a score based on semantic and contextual similarity. Higher similarity suggests the comments are on-topic and of higher quality.</p>
+    </div>
+
+    <!-- Backend URL Input Section -->
+    <div id="backendUrlSection" class="card-content">
+      <label for="backendUrl">Enter Backend URL:</label>
+      <input type="text" id="backendUrl" placeholder="https://your-backend-url.com" />
+      <button id="saveUrlBtn" class="save-url-btn">Save URL</button>
+      
+      <!-- Instructions for first-time users -->
+      <p class="instructions">
+        If this is your first time using the extension, please refer to the <a href="https://github.com/hummusonrails/comments-spam-analyzer" target="_blank">README</a> for setup instructions.
+      </p>
+    </div>
+    
+
+    <!-- Analysis Section -->
+    <div id="analyzeSection" class="card-content hidden">
+      <button id="analyzeBtn" class="analyze-btn">Analyze Comments</button>
+      
+      <div id="resultSection" class="hidden results">
+        <div>
+          <h3 class="section-title">Overall Quality</h3>
+          <p id="quality" class="quality-text">92%</p>
+        </div>
+        <div>
+          <h3 class="section-title">Semantic Similarity Distribution</h3>
+          <div class="distribution">
+            <span id="similar" class="distribution-text">Similar: 92%</span>
+            <span id="dissimilar" class="distribution-text">Dissimilar: 8%</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <p>Analyzing...</p>
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

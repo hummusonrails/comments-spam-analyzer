@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "comments-spam-analyzer"
+    },
+    "appShortName": {
+        "message": "comments-spam-analyzer"
+    },
+    "appDescription": {
+        "message": "Analyzes blog comments for quality content"
+    }
+}
