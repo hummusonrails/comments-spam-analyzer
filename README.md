@@ -2,7 +2,7 @@
 
 This extension helps you to analyze comments on Dev.to blog posts for overall quality based on their contextual and semantic similarity to each other. It must be paired with the [backend](https://www.github.com/hummusonrails/comments-spam-analyzer-backend), which is a Node.js server that uses [OpenAI](https://openai.com) to generate vector embeddings for the comments on the blog post, and then uses [Couchbase](https://couchbase.com) to store the embeddings and perform a vector similarity search on them and return a ranking of the comments based on that similarity score.
 
-<img src="demo_walkthrough.gif" alt="Extension Example" width="10%">
+<img src="demo_walkthrough.gif" alt="Extension Example" width="50%">
 
 ## Usage
 
